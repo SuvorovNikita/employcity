@@ -1,0 +1,5 @@
+.c-section {
+  $root: &;
+
+  @import "hero";
+}

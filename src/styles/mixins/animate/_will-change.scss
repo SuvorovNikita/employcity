@@ -1,0 +1,12 @@
+@use "../../variables";
+@use "../media";
+
+@mixin animate-will-change($properties...) {
+  @if length($properties) == 0 {
+    $properties: auto;
+  }
+
+  @include media.media-up(variables.$animation-breakpoint) {
+    will-change: $properties;
+  }
+}

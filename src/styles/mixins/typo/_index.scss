@@ -1,0 +1,33 @@
+@use "../../variables/index";
+
+@mixin typo-body-h1 {
+  font-family: $font-family-body;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+@mixin typo-header {
+  font-family: $font-family-body;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@mixin typo-text {
+  font-family: $font-family-body;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin typo-button {
+  font-family: $font-family-body;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}

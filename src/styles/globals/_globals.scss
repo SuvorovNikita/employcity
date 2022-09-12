@@ -1,0 +1,63 @@
+@use "../mixins";
+@use "../variables";
+
+@include fonts-import;
+
+* {
+  //outline: none !important;
+  min-height: 0;
+  min-width: 0;
+}
+
+//html, body {
+//  overscroll-behavior-y: none;
+//  -webkit-overflow-scrolling: touch;
+//}
+
+html {
+  overflow-x: hidden;
+
+  &.is-overlay {
+    overflow: hidden;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+
+  &.is-overlay {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  @include animate-transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}

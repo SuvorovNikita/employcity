@@ -1,0 +1,46 @@
+// Fonts
+
+$font-family-body: "Lato", sans-serif;
+
+//Colors
+$color-header: rgba(16, 16, 29, 0.9);
+$color-blue: #43abf0;
+$color-blue-h1: #3e9cdc;
+$color-border: #286690;
+$color-form: #272733;
+$color-grey: #bbbbbb;
+$color-button: #2a2b30;
+$color-white: #fff;
+
+// Animations
+
+$animation-breakpoint: md !default;
+$animation-duration: 0.2s !default;
+$animation-function: ease !default;
+$transition-breakpoint: md !default;
+$transition-duration: 0.2s !default;
+$transition-function: ease !default;
+
+// Grid Config
+
+$grid-gutter: 15px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 1124px,
+  xl: 1280px,
+);
+
+$container-max-widths: (
+  sm: 522px,
+  md: 708px,
+  lg: 944px,
+  xl: 1200px,
+);
+$container-max-widths-sm: (
+  sm: 522px,
+  md: 708px,
+  lg: 944px,
+  xl: 970px,
+);

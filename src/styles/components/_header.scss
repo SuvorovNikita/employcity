@@ -1,0 +1,58 @@
+@import "../mixins/index";
+@import "../variables/index";
+
+.c-header {
+  $root: &;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-header;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 97px;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list li {
+    list-style: none;
+    margin: 0 0 0 60px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    @include typo-header;
+    text-transform: uppercase;
+    color: $color-white;
+    @include animate-transition(color);
+
+    &--active {
+      color: $color-blue;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
