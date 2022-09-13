@@ -8,6 +8,11 @@
   top: 0;
   left: 0;
   z-index: 50;
+  display: none;
+
+  @include media-up(lg) {
+    display: block;
+  }
 
   &:before {
     content: "";
@@ -26,6 +31,10 @@
     justify-content: space-between;
     height: 97px;
     align-items: center;
+  }
+
+  &__logo {
+    flex: 1 1 35px;
   }
 
   &__list {
@@ -53,6 +62,142 @@
 
     &:hover {
       color: $color-blue;
+    }
+  }
+}
+
+.c-mobile-header {
+  $root: &;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: $color-header;
+
+  @include media-up(lg) {
+    display: none;
+  }
+
+  &__inner-body {
+    height: 100%;
+    position: relative;
+  }
+
+  &__body {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+    opacity: 0;
+    background-color: rgba(16, 16, 29, 1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      min-height: 100%;
+      height: 100%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    flex: none;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+
+      img {
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100%;
+  }
+
+  &__toggle {
+    flex: none;
+    user-select: none;
+    cursor: pointer;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+
+    &:hover,
+    &.is-active {
+      color: $color-blue;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid rgba($color-header, 0.1);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__actions {
+    margin-bottom: 30px;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.is-opened {
+    background-color: $color-header;
+
+    #{$root} {
+      &__body {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

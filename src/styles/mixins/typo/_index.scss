@@ -31,3 +31,26 @@
   font-size: 13px;
   line-height: 16px;
 }
+
+@mixin typo-h2 {
+  font-family: $font-family-body;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+@mixin typo-body-p {
+  font-family: $font-family-body;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin typo-body-text {
+  font-family: $font-family-body;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

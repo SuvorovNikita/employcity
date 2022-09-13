@@ -15,6 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "choices.js": "^10.1.0",
     "gatsby": "^4.22.0",
     "gatsby-plugin-sass": "^5.22.0",
     "gh-pages": "^4.0.0",

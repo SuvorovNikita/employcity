@@ -1,51 +1,28 @@
 import React from "react"
-import logo from "../assets/img/icon/logo.svg"
+
+import photo from "../assets/img/photo/photo.png"
 
 import "../styles/index.scss"
 
+import Header from "../components/Header/Header"
+
+import Order from "../components/Order/Order"
+import Footer from "../components/Footer/Footer"
+import { Content } from "../components/Content/Content"
+
 const IndexPages = () => {
   return (
-    <main>
-      <div className="wrapper">
-        <header className="c-header">
-          <div className="container">
-            <div className="c-header__body">
-              <a href="/" className="c-header__logo">
-                <img src={logo} alt="" />
-              </a>
-              <nav className="c-header__menu">
-                <ul className="c-header__list">
-                  <li>
-                    <a
-                      href=""
-                      className="c-header__link c-header__link--active"
-                    >
-                      Бизнес
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" className="c-header__link">
-                      О нас
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" className="c-header__link">
-                      Цены
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" className="c-header__link">
-                      Оформить заказ
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
-        <div className="c-section c-section--hero"></div>
-      </div>
-    </main>
+    <>
+      <Header />
+      <main
+        className="c-section c-section--main c-section--hero"
+        style={{ backgroundImage: `url(${photo})` }}
+      >
+        <Content />
+        <Order />
+      </main>
+      <Footer />
+    </>
   )
 }
 

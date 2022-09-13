@@ -1,0 +1,72 @@
+@import "../../variables/index";
+@import "../../mixins/index";
+
+&--content {
+  padding-bottom: 40px;
+
+  @include media-up(lg) {
+    padding-bottom: 202px;
+  }
+
+  #{$root} {
+    &__title {
+      @include typo-h2;
+      width: 100%;
+      font-size: 24px;
+      &--blue {
+        color: $color-blue-h1;
+      }
+
+      @include media-up(lg) {
+        @include typo-body-h1;
+        text-transform: uppercase;
+        margin: 0;
+        color: $color-dark;
+        margin-bottom: 80px;
+
+        &--blue {
+          color: $color-blue-h1;
+        }
+      }
+    }
+
+    &__inner {
+      margin-bottom: 40px;
+
+      @include media-up(lg) {
+        padding: 5px 5px 0 0;
+        margin-bottom: 80px;
+      }
+    }
+
+    &__subtitle {
+      @include typo-text;
+      color: $color-dark;
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      @include typo-text;
+      font-weight: 400;
+      padding-left: 15px;
+      margin-bottom: 5px;
+    }
+
+    &__wrapper {
+      display: block;
+      text-align: center;
+
+      @include media-up(lg) {
+        display: flex;
+      }
+    }
+
+    &__button {
+      margin-right: 0;
+      margin-top: 5px;
+      @include media-up(lg) {
+        margin-right: 30px;
+      }
+    }
+  }
+}

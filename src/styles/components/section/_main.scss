@@ -1,0 +1,8 @@
+&--main {
+  padding-top: 102px;
+
+  @include media-up(lg) {
+    padding-top: 203px;
+    position: relative;
+  }
+}

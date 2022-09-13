@@ -1,0 +1,72 @@
+@import "../mixins/index";
+@import "../variables/index";
+
+.c-footer {
+  $root: &;
+  background: $color-footer-bg;
+  padding: 36px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: none;
+
+    @include media-up(lg) {
+      display: block;
+      @include typo-button;
+      letter-spacing: 0em;
+      color: $color-white;
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__nav {
+    display: block;
+    margin: 0 auto;
+
+    @include media-up(lg) {
+      display: flex;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include media-up(lg) {
+      margin-right: 41px;
+    }
+
+    img {
+      margin-right: 10px;
+
+      @include media-up(lg) {
+        margin-right: 12px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @include typo-header;
+    color: $color-white;
+    @include animate-transition(color);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}

@@ -2,4 +2,7 @@
   $root: &;
 
   @import "hero";
+  @import "main";
+  @import "content";
+  @import "order";
 }
